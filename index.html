@@ -53,21 +53,21 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
+            <!-- <div class="is-size-5 publication-authors"> -->
               <!-- Paper authors -->
-              <span class="author-block">
+              <!-- <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
                 <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
                   </span>
-                  </div>
+                  </div> -->
 
-                  <div class="is-size-5 publication-authors">
+                  <!-- <div class="is-size-5 publication-authors">
                     <span class="author-block">Institution Name<br>Conferance name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                  </div> -->
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -148,7 +148,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Collecting high-quality data within simulation environments has proven to be an effective strategy for addressing data challenges in embodied AI. As a critical step in data collection, the construction of simulation scenes heavily relies on expert knowledge, while automated approaches often struggle with ensuring sufficient diversity and realism.
+To address these limitations, we present EmbodiedScene, a hierarchical framework that leverages large language models (LLMs) to automate the generation of diverse and realistic simulation scenes, with a particular focus on multi-room indoor scene synthesis.
+To encourage diversity, we introduce a unified representation that encodes spatial configurations and layout semantics. This representation is populated with detailed content by LLMs and further diversified using evolutionary algorithms. 
+It then serves as the foundation for downstream scene synthesis, guiding the generation of precise absolute parameters through a three-stage coarse-to-fine process: floor plan, region plan, and layout plan.
+To ensure reliability, we incorporate a vision-language model (VLM) as a stage-wise scene critic. The VLM provides feedback by comparing intended design objectives with the generated outputs and guides iterative refinement at each stage.
+Experimental results demonstrate that EmbodiedScene generates scenes with significantly greater realism and diversity than strong baselines. We further show that EmbodiedScene plays a key role in improving the performance of downstream embodied AI tasks.
           </p>
         </div>
       </div>
@@ -165,25 +170,14 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/main.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Overall framework of EmbodiedScene. After a user provides a prompt, EmbodiedScene first uses an LLM to populate the
+content based on our designed scene structural representation. Then, it enhances diversity through an evolutionary algorithm. The
+structural representation is used to guide a three-stage scene generation process, during which EmbodiedScene employs a VLM to evaluate
+and refine the goals and outputs at each stage.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
      <div class="item">
       <!-- Your image here -->
       <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
